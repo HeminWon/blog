@@ -1,0 +1,34 @@
+language: node_js
+node_js: stable
+branches:
+  only:
+  - master
+cache:
+  yarn: true
+  directories:
+    - node_modules
+    - themes
+before_install:
+- git submodule init
+- git submodule update
+- cd _hexo
+install:
+- npm install
+- npm install -g hexo-cli
+before_script: 
+script:
+- hexo clean
+- hexo generate
+after_success:
+- git config --global user.name "HeminWon"
+- git config --global user.email "waiting4254@gmail.com"
+- sed -i'' "/^ *repo/s~github\.com~${GH_TOKEN}@github.com~" _config.yml
+- hexo deploy --silent
+notifications:
+  email:
+  - waiting4254@gmail.com
+  on_success: change
+  on_failure: always
+env:
+  global:
+    secure: hO3VJh1ah6dGr3XNF9MxaztKa3AjWfzD8gTZhzbPRbDoJX1eqihk2pY1VB8g+sWdbormAs73kM6KsKKFd1Q3RNDaOVuXJnbZaIhAsG37Brp2yuMACfCBjY42vn8PXi3RfKb6KmGF6a1pQ98vqnJomWwD+irBo0213ayeNDWokMZ+xoRX9wRxurC+oXh2PypZePvQByLc3TdCIulHd6PxJXZoYWroxo0ignzUFZvF+LZzBhUD2z+TRCgHIHh0fUpK1zfjvEm0XrmIcopms3UtQ99qSO4E8x/reamKbkZ+Cwa5gmOccryezJRU4CiQCZ19BjX/JHConNe42LkWk0HtAjVW7SKZ3yWEwo0oIS2GxqxeUJ8aFpVF1pVy6bzd+cdh4wU1gY/lGww59vtXqs7dW5jFCPOrsQBJ23wWT6I8PLfTlj6K2H4hmW7b6ZGwn6gYu+3j6Qb8vyG3x1JsKSEwxt1klx15NIUkCS7zyi8OfhRA8Vc3WCZoPOFD/slxWtY97aU/EeMMejdZhESwzDqADLPtJwMTTcf8mWOah3lPkyGZI9l9q4KpFfe2SE488wZKPC19n2MwzrmRBcMMCgZ6jweZY4eI+qfTkBRLahFgBAKkE9g7RzTEB9meQ4efxxuhXU0ITcPLd3cH+oT2xgdW+vd0SLWmydAERMBrNqQz0Jw=
