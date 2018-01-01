@@ -3,19 +3,19 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-author: John Doe
-language:
-timezone:
+title: HeMin's Notes
+subtitle: iOS Dev.
+description: Keep the dream alive
+author: Hemin Won
+language: zh-CN
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /
-permalink: :year/:month/:day/:title/
-permalink_defaults:
+url: http:heminwon.github.io/blog   #http://yoursite.com
+root: /blog/
+permalink: archives/:title.html  #:year/:month/:day/:title/
+permalink_defaults: :title.html
 
 # Directory
 source_dir: source
