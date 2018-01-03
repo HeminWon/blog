@@ -7,7 +7,6 @@ cache:
   yarn: true
   directories:
     - node_modules
-    - themes
 before_install:
 - git submodule init
 - git submodule update
