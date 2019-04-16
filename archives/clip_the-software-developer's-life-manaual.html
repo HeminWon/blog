@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            《软技能-代码之外的生存指南》读书笔记 | 
+        
+        HeMin&#39;s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/blog/img/favicon.png">
+    <link rel="icon" href="/blog/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="Keep the dream alive">
+    <meta name="keywords" content="HeminWon">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/blog/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/blog/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/blog/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/blog/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="HeMin&#39;s Blog">
+    <meta name="msapplication-starturl" content="https://heminwon.github.io/blog/blog/archives/clip_the-software-developer&#39;s-life-manaual.html">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="HeMin&#39;s Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/blog/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://heminwon.github.io/blog/blog/archives/clip_the-software-developer&#39;s-life-manaual.html">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="《软技能-代码之外的生存指南》读书笔记 | HeMin&#39;s Blog">
+    <meta property="og:image" content="/blog/img/favicon.png">
+    <meta property="og:description" content="Keep the dream alive">
+    
+
+    
+        <meta property="article:published_time" content="Sun Feb 03 2019 00:00:00 GMT+0800">
+        <meta property="article:modified_time" content="Tue Apr 16 2019 05:06:50 GMT+0000">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://heminwon.github.io/blog/blog/archives/clip_the-software-developer's-life-manaual.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://heminwon.github.io/blog/blog/archives/clip_the-software-developer's-life-manaual.html",
+    "headline": "《软技能-代码之外的生存指南》读书笔记",
+    "datePublished": "Sun Feb 03 2019 00:00:00 GMT+0800",
+    "dateModified": "Tue Apr 16 2019 05:06:50 GMT+0000",
+    "author": {
+        "@type": "Person",
+        "name": "Hemin Won",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "信息不互通是这个世界的BUG，而整个互联网都是为了修补这个漏洞而存在"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "HeMin&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "HeminWon",
+    "description": "Keep the dream alive",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-111726454-1', 'auto');ga('send', 'pageview');
+</script>
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#职业"><span class="post-toc-number">1.</span> <span class="post-toc-text">职业</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#从非同凡响开始：绝不要做他人都在做的事"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">从非同凡响开始：绝不要做他人都在做的事</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#采取行动"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">采取行动</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#思考未来：你的目标是什么"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">思考未来：你的目标是什么</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#采取行动-1"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">采取行动</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#人际交往能力：远比你想象的重要"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">人际交往能力：远比你想象的重要</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#破解面试之道"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">破解面试之道</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#你是哪类软件开发人员"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">你是哪类软件开发人员</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#采取行动-2"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">采取行动</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#攀登晋升阶梯"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">攀登晋升阶梯</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#承担责任"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">承担责任</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#引人注目"><span class="post-toc-number">1.6.2.</span> <span class="post-toc-text">引人注目</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#自学"><span class="post-toc-number">1.6.3.</span> <span class="post-toc-text">自学</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#成为问题的解决者"><span class="post-toc-number">1.6.4.</span> <span class="post-toc-text">成为问题的解决者</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#关于政治"><span class="post-toc-number">1.6.5.</span> <span class="post-toc-text">关于政治</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#成为专业人士"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">成为专业人士</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#专业人士的品质"><span class="post-toc-number">1.7.1.</span> <span class="post-toc-text">专业人士的品质</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#书单"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">书单</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/blog/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                《软技能-代码之外的生存指南》读书笔记
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/blog/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Hemin Won</strong>
+        <span>2月 03, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=《软技能-代码之外的生存指南》读书笔记&url=https://heminwon.github.io/blog/blog/archives/clip_the-software-developer&#39;s-life-manaual.html&pic=https://heminwon.github.io/blog/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=《软技能-代码之外的生存指南》读书笔记&url=https://heminwon.github.io/blog/blog/archives/clip_the-software-developer&#39;s-life-manaual.html&via=Hemin Won" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://heminwon.github.io/blog/blog/archives/clip_the-software-developer&#39;s-life-manaual.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://heminwon.github.io/blog/blog/archives/clip_the-software-developer&#39;s-life-manaual.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>工作快三年了，一直以来都是关注自身在技术方向的成长，却忽视了在其他方向的进步，正好这是一本真正从“人”（而非技术也非管理）的角度关注软件开发人员自身发展的书。</p>
+<hr>
+<p>这里说的『优秀的软件开发人员』是那些能够把控自己职业生涯、达成目标、享受生活的人。</p>
+<h3 id="职业"><a href="#职业" class="headerlink" title="职业"></a>职业</h3><blockquote>
+<p>工作是属于公司的，而职业生涯却是属于你自己的。</p>
+<p>​                             ——厄尔·南丁格尔</p>
+</blockquote>
+<h4 id="从非同凡响开始：绝不要做他人都在做的事"><a href="#从非同凡响开始：绝不要做他人都在做的事" class="headerlink" title="从非同凡响开始：绝不要做他人都在做的事"></a>从非同凡响开始：绝不要做他人都在做的事</h4><p>拥有商业心态，把自己当作一个企业去思考时，你才能做出良好的商业决策。把雇主当作是你软件开发企业的一个客户，想想你有什么可以卖？你的产品或服务是什么？</p>
+<ul>
+<li>专注于你正在提供怎样的服务，以及如何营销这项服务；</li>
+<li>想方设法提升你的服务；</li>
+<li>思考你可以专注为哪一特定类型的客户或行业提供特定的服务；</li>
+<li>集中精力成为一位专家，专门为某一特定类型的客户提供专业的整体服务（记住，作为一个软件开发人员，你只有真正专注于一类客户，才能找到非常好的工作）。</li>
+</ul>
+<h5 id="采取行动"><a href="#采取行动" class="headerlink" title="采取行动"></a>采取行动</h5><ul>
+<li>想象一下：有一家企业，拥有某个产品或服务。他们将如何推广这一产品或服务从而可以做到卓尔不凡？</li>
+<li>如果只用一句话来描述你能为潜在雇主或客户提供怎样的特定服务，这句话是什么？</li>
+<li>把你的职业当作是一个企业，将会影响你的：<ul>
+<li>工作的方式；</li>
+<li>处理自己的财务的方式；</li>
+<li>寻求新工作或新客户的方式。</li>
+</ul>
+</li>
+</ul>
+<h4 id="思考未来：你的目标是什么"><a href="#思考未来：你的目标是什么" class="headerlink" title="思考未来：你的目标是什么"></a>思考未来：你的目标是什么</h4><p>大目标并不需要那么具体，但是必须足够清晰，能够让你知道自己是在向它前进还是离他越来越远。一旦你想通了自己长远的大目标是什么，下一步就是设定路线，制定通往大目标的小目标。同时你应该定期追踪并更新自己设定的目标，必要时还要调整。</p>
+<h5 id="采取行动-1"><a href="#采取行动-1" class="headerlink" title="采取行动"></a>采取行动</h5><ul>
+<li>坐下来，为你的职业生涯设置至少一个大目标。</li>
+<li>将大目标分解成相应的若干小目标，例如：<ul>
+<li>月度目标；</li>
+<li>周目标；</li>
+<li>每日目标。</li>
+</ul>
+</li>
+<li>把你的大目标写在自己每天的必经之地，每日三省吾身——我在追求什么。</li>
+</ul>
+<h4 id="人际交往能力：远比你想象的重要"><a href="#人际交往能力：远比你想象的重要" class="headerlink" title="人际交往能力：远比你想象的重要"></a>人际交往能力：远比你想象的重要</h4><ul>
+<li><p><strong>每个人都希望感到自己很重要</strong> 请谨记当你和别人打交道的时候，你应该知道的最重要的一个概念就是：以自己为核心，每个人都希望自己很重要。这是人类最深邃、最致命的欲望之一，也是社会和生活中取得伟大成就的主要动机。</p>
+<p>不要轻率地否决同事的想法，以便于可以提出自己的想法，这样很可能会导致他们对你的想法充耳不闻，仅仅是因为你让他们感觉自己是无足轻重的。</p>
+</li>
+<li><p><strong>永远不要批评</strong>  如果你想去激励团队鼓舞士气，那么就用表扬代替批评吧。</p>
+</li>
+<li><p><strong>换位思考</strong> 思考对他人而言什么才最重要，什么是他们需要的。</p>
+</li>
+<li><p><strong>避免争吵</strong> 当你被拖入一场争吵之前，想想办法看看能不能逆转。做个有趣的小测试，试着认输。事实上，不仅仅要认输，更要果断站在对手一边，结果能让你大吃一惊。</p>
+</li>
+</ul>
+<h4 id="破解面试之道"><a href="#破解面试之道" class="headerlink" title="破解面试之道"></a>破解面试之道</h4><ul>
+<li>大多数面试官决定雇佣某个人是基于各种各样的非技术因素；</li>
+<li>通过面试最快捷的方式是让面试官对你怀有好感。达成该目标有很多方法，其中大多数可以在面试之前完成；</li>
+<li>即使你现在不需要努力找工作，也要整理一份清单，列出你想去工作的公司，以及你认识的这些公司的人。</li>
+</ul>
+<h4 id="你是哪类软件开发人员"><a href="#你是哪类软件开发人员" class="headerlink" title="你是哪类软件开发人员"></a>你是哪类软件开发人员</h4><ul>
+<li><strong>专业化很重要</strong> 专业化程度越深，潜在的机会就越少，但获得这些机会的可能性就越大。</li>
+<li><strong>选择你的专业</strong> 可以是公司项目的主要痛点，某一缺乏经验丰富的特定工作，各种会议上和用户组中常出现的话题。</li>
+</ul>
+<h5 id="采取行动-2"><a href="#采取行动-2" class="headerlink" title="采取行动"></a>采取行动</h5><ul>
+<li>列出你能想到的所有软件开发的专业领域。从广义的范畴将它们逐一细化，看看你能细化到多具体。</li>
+<li>你当前的专业领域是什么？如果没有的话，想想你会选择专攻哪个领域。</li>
+<li>去主流的招聘网站上看看自己的专业领域市场行情如何。确定一下，专业化道路是会让自己受益，还是过度限制了自己的选择。</li>
+</ul>
+<h4 id="攀登晋升阶梯"><a href="#攀登晋升阶梯" class="headerlink" title="攀登晋升阶梯"></a>攀登晋升阶梯</h4><h5 id="承担责任"><a href="#承担责任" class="headerlink" title="承担责任"></a>承担责任</h5><ul>
+<li>有一个不受重视的项目，你能去负责它吗？</li>
+<li>你能帮助团队里的新人快速成长吗？</li>
+<li>你能负责文档制作流程，并保证及时更新这些文档吗？</li>
+<li>哪些工作是没有人愿意去做，你愿意承担起来，并将其简化或者自动化的？</li>
+</ul>
+<h5 id="引人注目"><a href="#引人注目" class="headerlink" title="引人注目"></a>引人注目</h5><ul>
+<li><em>每天都记录自己的活动日志</em>——把这个日志以周报的形式发送给你的经理。</li>
+<li><em>提供演讲或培训</em>——选择一个对你的团队有用的话题。</li>
+<li><em>发表意见</em>——只要在会议上就这么做，或者只要你能得到机会就这么做。</li>
+<li><em>保证“曝光度“</em>——定期与老板会面，确保你经常被注意到。</li>
+</ul>
+<h5 id="自学"><a href="#自学" class="headerlink" title="自学"></a>自学</h5><ul>
+<li>你应该不断学习新东西，提升自己的技能。另外，不要只学软件开发。如果你把目标设定为更高级别的岗位甚至是行政岗位，你还需要学习领导力、管理和商科的相关知识。</li>
+<li>不要玩完估计分享自己学到的东西。</li>
+</ul>
+<h5 id="成为问题的解决者"><a href="#成为问题的解决者" class="headerlink" title="成为问题的解决者"></a>成为问题的解决者</h5><ul>
+<li>成为永远能为各种问题找到解决方案的人，成为勇于执行这些解决方案以获得成果的人。</li>
+</ul>
+<h5 id="关于政治"><a href="#关于政治" class="headerlink" title="关于政治"></a>关于政治</h5><ul>
+<li>脚踏实地成为一个真正有价值的员工要比弄虚作假好得多</li>
+<li>至少应该知道会发生什么，哪种人需要避开，哪种人永远不要有交集</li>
+</ul>
+<h4 id="成为专业人士"><a href="#成为专业人士" class="headerlink" title="成为专业人士"></a>成为专业人士</h4><p>成为专业人士是一种心态。如果我们总是与恐惧、自毁、拖延和自我怀疑作斗争，那么问题就是：我们正在像外行那样思考问题。外行毫不起眼，外行废话连篇，外行屈从于逆境。专业人士可不这么想。不管怎样，他引人注目，他恪尽职守，他始终如一。</p>
+<h5 id="专业人士的品质"><a href="#专业人士的品质" class="headerlink" title="专业人士的品质"></a>专业人士的品质</h5><ul>
+<li>遵守自己的原则；</li>
+<li>专注于正确完成工作；</li>
+<li>不惧怕承认自己错了；</li>
+<li>持续稳定；</li>
+<li>用于承担责任；</li>
+<li>养成良好习惯；</li>
+<li>追求品质，完善自我。</li>
+</ul>
+<h4 id="书单"><a href="#书单" class="headerlink" title="书单"></a>书单</h4><ul>
+<li>Dale Carnegie的《人性的弱点》</li>
+<li>Charles Duhigg的《习惯的力量》</li>
+</ul>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 gitcoment -->
+<div id="gitment-comment">
+    <!-- Gitment 评论框 -->
+<div id="container"></div>
+</div>
+<style>
+    #gitment-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        //id: '页面 ID', // 可选。默认为 location.href
+        owner: 'HeminWon',
+        repo: 'gitment',
+        oauth: {
+            client_id: '043d6b5992c32c9aa88e',
+            client_secret: 'c42203f61319476ff8180fa7d7a44e00e81789fa',
+        },
+    })
+    gitment.render('container')
+</script>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/blog/archives/svn-github.html" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/blog/archives/hello-world.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/blog/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/blog/img/avatar.png" alt="Hemin Won's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        heminwmh@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:heminwmh@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://heminwon.github.io/" target="_blank" title="Profile">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">explorer</i>
+                        
+                        Profile
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/blog/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/blog/categories/reading/">reading<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/categories/tech/">tech<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/blog/tags.html" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">bookmark</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/blog/timeline.html" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+        <li>
+            <a href="/blog/about.html" title="关于我">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于我
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/blog/links.html" title="友链">
+                
+                    <i class="material-icons sidebar-material-icons">people</i>
+                
+                友链
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">3</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="https://weibo.com/heminwon" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/HeminWon" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+        <a href="https://t.me/heminwon" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram">
+                <span class="visuallyhidden">Telegram</span>
+            </button><!--
+     --></a>
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2015&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>HeMin's Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/blog/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/blog/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/blog/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- Gitment -->
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/blog/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
