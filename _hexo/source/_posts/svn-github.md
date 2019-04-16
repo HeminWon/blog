@@ -1,5 +1,5 @@
 ---
-title: github与svn实现单文件(夹)下载
+title: github与svn实现git仓库单文件(夹)下载
 date: 2019/04/16
 categories: tech
 ---
@@ -13,6 +13,7 @@ categories: tech
 #### [git-svn](<https://git-scm.com/docs/git-svn>)
 
 ```
+# 此方法只可实现对文件夹的下载
 # 下载 master 文件夹
 $ git svn clone <rul>/trunk/<dir> <localdir>
 # 下载 指定brach文件夹
