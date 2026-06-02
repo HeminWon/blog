@@ -1,6 +1,6 @@
 ---
 title: 「时间轴」
-layout: timeline
+date: 2018-01-01 22:22:22
 permalink: timeline.html
-date: 2018-1-1 22:22:22
+comments: false
 ---

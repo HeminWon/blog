@@ -11,10 +11,9 @@ language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://heminwon.github.io/blog   #http://yoursite.com
+url: https://heminwon.github.io/blog
 root: /blog/
-permalink: archives/:title.html  #:year/:month/:day/:title/
+permalink: archives/:title.html
 permalink_defaults: :title.html
 
 # Directory
@@ -28,55 +27,69 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :title.md
 default_layout: post
-titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: []
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-highlight:
-  enable: true
-  line_number: true
-  auto_detect: false
-  tab_replace:
-  
+
 # Home page setting
-# path: Root path for your blogs index page. (default = '')
-# per_page: Posts displayed per page. (0 = disable pagination)
-# order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
   per_page: 10
   order_by: -date
-  
+
 # Category & Tag
 default_category: uncategorized
 category_map:
 tag_map:
 
 # Date / Time format
-## Hexo uses Moment.js to parse and display date
-## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 
 # Pagination
-## Set per_page to 0 to disable pagination
 per_page: 10
 pagination_dir: page
+
+# Syntax Highlighting (Hexo 7 built-in)
+syntax_highlighter: highlight.js
+
+# Updated option
+updated_option: date
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-material
+theme: next
+
+# RSS Feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+
+# Sitemap
+sitemap:
+  path: sitemap.xml
+
+# Search
+search:
+  path: search.xml
+  field: post
+  content: true
 
 # Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy: 
+deploy:
   type: git
   repository: https://github.com/HeminWon/blog.git
   branch: gh-pages
+  message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
