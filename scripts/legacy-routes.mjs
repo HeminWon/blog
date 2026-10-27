@@ -1,4 +1,4 @@
-// Keep Hexo directory URLs alongside Astro's flat HTML output.
+// Keep existing directory URLs alongside Astro's flat HTML output.
 import { readdir, mkdir, copyFile } from 'node:fs/promises';
 import { join } from 'node:path';
 async function visit(dir) {
