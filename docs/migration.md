@@ -4,6 +4,8 @@
 
 关于与友链沿用 `.html` 地址；分类、年月归档保留目录地址。Atom 订阅与 sitemap 由 Astro 生成。
 
-原 Hexo 配置、`scaffolds/` 留作迁移参考，不参与 Astro 构建。`source/tags/`、`source/timeline/` 中的旧入口不再参与构建，页面由 Astro 自动生成。原生成目录 `public/` 不会被复制，静态资源改放 `static/`。
+旧配置 `_config.yml`、`_config.next.yml`、文章模板 `scaffolds/` 及 `source/tags/`、`source/timeline/` 的旧入口已删除。标签与时间轴由 Astro 自动生成。
+
+本地 Hexo 缓存 `db.json`、原生成目录 `public/` 和空的 `themes/` 已清理，相关忽略与检查配置同步移除。静态资源位于 `static/`。
 
 运行时已移除 NexT，页面使用 Still 自定义主题。部署输出从 `public/` 改为 `dist/`。

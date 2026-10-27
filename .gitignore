@@ -1,10 +1,14 @@
 ### Create by HeminWon
 .DS_Store
 Thumbs.db
-db.json
 *.log
 node_modules/
-public/
-.deploy*/
 dist/
 .astro/
+
+# Agent 工具目录
+/.agents/
+/.claude/
+/.codex/
+/.cursor/
+/.dsh/
