@@ -1,312 +1,38 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
-  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/blog/css/main.css">
-
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-
-<script class="next-config" data-name="main" type="application/json">{"hostname":"heminwon.github.io","root":"/blog/","images":"/blog/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat","show_result":true},"fold":{"enable":false,"height":500},"language":false,"highlight_theme":"normal"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/blog/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":false,"trigger":"auto"}}</script><script src="/blog/js/config.js" defer></script>
-
-    <meta name="description" content="工作快三年了，一直以来都是关注自身在技术方向的成长，却忽视了在其他方向的进步，正好这是一本真正从“人”（而非技术也非管理）的角度关注软件开发人员自身发展的书。  这里说的『优秀的软件开发人员』是那些能够把控自己职业生涯、达成目标、享受生活的人。 职业 工作是属于公司的，而职业生涯却是属于你自己的。 ​		     				——厄尔·南丁格尔  从非同凡响开始：绝不要做他人都在做的事拥有商业心态，把">
-<meta property="og:type" content="article">
-<meta property="og:title" content="《软技能-代码之外的生存指南》读书笔记">
-<meta property="og:url" content="https://heminwon.github.io/blog/archives/clip_the-software-developer's-life-manaual.html">
-<meta property="og:site_name" content="Hemin&#39;s Blog">
-<meta property="og:description" content="工作快三年了，一直以来都是关注自身在技术方向的成长，却忽视了在其他方向的进步，正好这是一本真正从“人”（而非技术也非管理）的角度关注软件开发人员自身发展的书。  这里说的『优秀的软件开发人员』是那些能够把控自己职业生涯、达成目标、享受生活的人。 职业 工作是属于公司的，而职业生涯却是属于你自己的。 ​		     				——厄尔·南丁格尔  从非同凡响开始：绝不要做他人都在做的事拥有商业心态，把">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-02-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2019-02-02T16:00:00.000Z">
-<meta property="article:author" content="Hemin Won">
-<meta name="twitter:card" content="summary">
-
-
-<link rel="canonical" href="https://heminwon.github.io/blog/archives/clip_the-software-developer's-life-manaual.html">
-
-
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://heminwon.github.io/blog/archives/clip_the-software-developer's-life-manaual.html","path":"archives/clip_the-software-developer's-life-manaual.html","title":"《软技能-代码之外的生存指南》读书笔记"}</script>
-
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>《软技能-代码之外的生存指南》读书笔记 | Hemin's Blog</title>
-  
-
-
-
-
-
-
-
-
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
-<script src="/blog/js/utils.js" defer></script><script src="/blog/js/motion.js" defer></script><script src="/blog/js/sidebar.js" defer></script><script src="/blog/js/next-boot.js" defer></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
-<script src="/blog/js/third-party/search/local-search.js" defer></script>
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  <noscript>
-    <link rel="stylesheet" href="/blog/css/noscript.css">
-  </noscript>
-<link rel="alternate" href="/blog/atom.xml" title="Hemin's Blog" type="application/atom+xml">
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
-
-  <main class="main">
-    <div class="column">
-      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/blog/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <p class="site-title">Hemin's Blog</p>
-      <i class="logo-line"></i>
-    </a>
-      <p class="site-subtitle" itemprop="description">iOS Dev.</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger" aria-label="搜索" role="button">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
-
-
-
-<nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/blog/about.html" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/blog/tags.html" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/blog/categories.html" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/blog/archives" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-友链"><a href="/blog/links.html" rel="section"><i class="fa fa-link fa-fw"></i>友链</a></li><li class="menu-item menu-item-时间轴"><a href="/blog/timeline.html" rel="section"><i class="fa fa-clock fa-fw"></i>时间轴</a></li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-      <div class="search-header">
-        <span class="search-icon">
-          <i class="fa fa-search"></i>
-        </span>
-        <div class="search-input-container">
-          <input autocomplete="off" autocapitalize="off" maxlength="80"
-                placeholder="搜索..." spellcheck="false"
-                type="search" class="search-input">
-        </div>
-        <span class="popup-btn-close" role="button">
-          <i class="fa fa-times-circle"></i>
-        </span>
-      </div>
-      <div class="search-result-container">
-        <div class="search-result-icon">
-          <i class="fa fa-spinner fa-pulse fa-5x"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</header>
-        
-  
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%81%8C%E4%B8%9A"><span class="nav-number">1.</span> <span class="nav-text">职业</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%8E%E9%9D%9E%E5%90%8C%E5%87%A1%E5%93%8D%E5%BC%80%E5%A7%8B%EF%BC%9A%E7%BB%9D%E4%B8%8D%E8%A6%81%E5%81%9A%E4%BB%96%E4%BA%BA%E9%83%BD%E5%9C%A8%E5%81%9A%E7%9A%84%E4%BA%8B"><span class="nav-number">1.1.</span> <span class="nav-text">从非同凡响开始：绝不要做他人都在做的事</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%87%87%E5%8F%96%E8%A1%8C%E5%8A%A8"><span class="nav-number">1.1.1.</span> <span class="nav-text">采取行动</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%80%83%E6%9C%AA%E6%9D%A5%EF%BC%9A%E4%BD%A0%E7%9A%84%E7%9B%AE%E6%A0%87%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.2.</span> <span class="nav-text">思考未来：你的目标是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%87%87%E5%8F%96%E8%A1%8C%E5%8A%A8-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">采取行动</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%BA%E9%99%85%E4%BA%A4%E5%BE%80%E8%83%BD%E5%8A%9B%EF%BC%9A%E8%BF%9C%E6%AF%94%E4%BD%A0%E6%83%B3%E8%B1%A1%E7%9A%84%E9%87%8D%E8%A6%81"><span class="nav-number">1.3.</span> <span class="nav-text">人际交往能力：远比你想象的重要</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A0%B4%E8%A7%A3%E9%9D%A2%E8%AF%95%E4%B9%8B%E9%81%93"><span class="nav-number">1.4.</span> <span class="nav-text">破解面试之道</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%A0%E6%98%AF%E5%93%AA%E7%B1%BB%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98"><span class="nav-number">1.5.</span> <span class="nav-text">你是哪类软件开发人员</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%87%87%E5%8F%96%E8%A1%8C%E5%8A%A8-2"><span class="nav-number">1.5.1.</span> <span class="nav-text">采取行动</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%94%80%E7%99%BB%E6%99%8B%E5%8D%87%E9%98%B6%E6%A2%AF"><span class="nav-number">1.6.</span> <span class="nav-text">攀登晋升阶梯</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%BF%E6%8B%85%E8%B4%A3%E4%BB%BB"><span class="nav-number">1.6.1.</span> <span class="nav-text">承担责任</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BC%95%E4%BA%BA%E6%B3%A8%E7%9B%AE"><span class="nav-number">1.6.2.</span> <span class="nav-text">引人注目</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%87%AA%E5%AD%A6"><span class="nav-number">1.6.3.</span> <span class="nav-text">自学</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%88%90%E4%B8%BA%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E8%80%85"><span class="nav-number">1.6.4.</span> <span class="nav-text">成为问题的解决者</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E6%94%BF%E6%B2%BB"><span class="nav-number">1.6.5.</span> <span class="nav-text">关于政治</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%90%E4%B8%BA%E4%B8%93%E4%B8%9A%E4%BA%BA%E5%A3%AB"><span class="nav-number">1.7.</span> <span class="nav-text">成为专业人士</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%93%E4%B8%9A%E4%BA%BA%E5%A3%AB%E7%9A%84%E5%93%81%E8%B4%A8"><span class="nav-number">1.7.1.</span> <span class="nav-text">专业人士的品质</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B9%A6%E5%8D%95"><span class="nav-number">1.8.</span> <span class="nav-text">书单</span></a></li></ol></li></ol></div>
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Hemin Won"
-      src="/blog/images/avatar.png">
-  <p class="site-author-name" itemprop="name">Hemin Won</p>
-  <div class="site-description" itemprop="description">Keep the dream alive</div>
-</div>
-<div class="site-state-wrap animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/blog/archives">
-          <span class="site-state-item-count">3</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">分类</span>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author animated">
-      <span class="links-of-author-item">
-        <a href="https://github.com/HeminWon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;HeminWon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-  </div>
-  <div class="cc-license animated" itemprop="license">
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
-  </div>
-
-        </div>
-      </div>
-    </div>
-
-    
-  </aside>
-
-
-    </div>
-
-    <div class="main-inner post posts-expand">
-
-
-  
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://heminwon.github.io/blog/archives/clip_the-software-developer's-life-manaual.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.png">
-      <meta itemprop="name" content="Hemin Won">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hemin's Blog">
-      <meta itemprop="description" content="Keep the dream alive">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="《软技能-代码之外的生存指南》读书笔记 | Hemin's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          《软技能-代码之外的生存指南》读书笔记
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2019-02-03 00:00:00" itemprop="dateCreated datePublished" datetime="2019-02-03T00:00:00+08:00">2019-02-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/blog/categories/reading/" itemprop="url" rel="index"><span itemprop="name">reading</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody"><p>工作快三年了，一直以来都是关注自身在技术方向的成长，却忽视了在其他方向的进步，正好这是一本真正从“人”（而非技术也非管理）的角度关注软件开发人员自身发展的书。</p>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="description" content="记录独立思考，收藏视觉灵感，分享技术实践。"><meta name="theme-color" content="#f5f5f1"><link rel="canonical" href="https://heminwon.github.io/blog/archives/clip_the-software-developer's-life-manaual.html"><link rel="alternate" type="application/atom+xml" title="Hemin's Blog" href="/blog/atom.xml"><title>《软技能-代码之外的生存指南》读书笔记 · Hemin&#39;s Blog</title><script>try{const t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch{}</script><link rel="stylesheet" href="/blog/_astro/Layout.DtX8K8kp.css"></head><body id="top"><a class="skip-link" href="#main">跳到正文</a><header class="site-header"><a class="brand" href="/blog/" aria-label="Hemin 的首页"><span class="brand-mark" aria-hidden="true">h.</span><span>Hemin<span class="brand-sub">A PERSONAL JOURNAL</span></span></a><nav aria-label="主导航"><a href="/blog/">首页</a><a href="/blog/thoughts.html">思考</a><a href="/blog/gallery.html">画廊</a><a href="/blog/tech.html">技术</a><a href="/blog/about.html">关于</a></nav><button id="theme" class="theme-toggle" aria-label="切换深浅色模式" title="切换深浅色模式">◐</button></header><main id="main"><header class="page-heading"><p class="eyebrow"><a href="/blog/thoughts.html">← THOUGHTS &amp; NOTES</a></p><h1>《软技能-代码之外的生存指南》读书笔记</h1><div class="eyebrow"><time datetime="2019-02-03T00:00:00.000Z">2019-02-03</time><span> / 5 分钟阅读</span><a href="/blog/categories/reading.html">reading</a></div></header><div class="reading-layout thoughts"><article class="prose"><p>工作快三年了，一直以来都是关注自身在技术方向的成长，却忽视了在其他方向的进步，正好这是一本真正从“人”（而非技术也非管理）的角度关注软件开发人员自身发展的书。</p>
 <hr>
 <p>这里说的『优秀的软件开发人员』是那些能够把控自己职业生涯、达成目标、享受生活的人。</p>
-<h3 id="职业"><a href="#职业" class="headerlink" title="职业"></a>职业</h3><blockquote>
+<h3 id="职业">职业</h3>
+<blockquote>
 <p>工作是属于公司的，而职业生涯却是属于你自己的。</p>
 <p>​		     				——厄尔·南丁格尔</p>
 </blockquote>
-<h4 id="从非同凡响开始：绝不要做他人都在做的事"><a href="#从非同凡响开始：绝不要做他人都在做的事" class="headerlink" title="从非同凡响开始：绝不要做他人都在做的事"></a>从非同凡响开始：绝不要做他人都在做的事</h4><p>拥有商业心态，把自己当作一个企业去思考时，你才能做出良好的商业决策。把雇主当作是你软件开发企业的一个客户，想想你有什么可以卖？你的产品或服务是什么？</p>
+<h4 id="从非同凡响开始绝不要做他人都在做的事">从非同凡响开始：绝不要做他人都在做的事</h4>
+<p>拥有商业心态，把自己当作一个企业去思考时，你才能做出良好的商业决策。把雇主当作是你软件开发企业的一个客户，想想你有什么可以卖？你的产品或服务是什么？</p>
 <ul>
 <li>专注于你正在提供怎样的服务，以及如何营销这项服务；</li>
 <li>想方设法提升你的服务；</li>
 <li>思考你可以专注为哪一特定类型的客户或行业提供特定的服务；</li>
 <li>集中精力成为一位专家，专门为某一特定类型的客户提供专业的整体服务（记住，作为一个软件开发人员，你只有真正专注于一类客户，才能找到非常好的工作）。</li>
 </ul>
-<h5 id="采取行动"><a href="#采取行动" class="headerlink" title="采取行动"></a>采取行动</h5><ul>
+<h5 id="采取行动">采取行动</h5>
+<ul>
 <li>想象一下：有一家企业，拥有某个产品或服务。他们将如何推广这一产品或服务从而可以做到卓尔不凡？</li>
 <li>如果只用一句话来描述你能为潜在雇主或客户提供怎样的特定服务，这句话是什么？</li>
-<li>把你的职业当作是一个企业，将会影响你的：<ul>
+<li>把你的职业当作是一个企业，将会影响你的：
+<ul>
 <li>工作的方式；</li>
 <li>处理自己的财务的方式；</li>
 <li>寻求新工作或新客户的方式。</li>
 </ul>
 </li>
 </ul>
-<h4 id="思考未来：你的目标是什么"><a href="#思考未来：你的目标是什么" class="headerlink" title="思考未来：你的目标是什么"></a>思考未来：你的目标是什么</h4><p>大目标并不需要那么具体，但是必须足够清晰，能够让你知道自己是在向它前进还是离他越来越远。一旦你想通了自己长远的大目标是什么，下一步就是设定路线，制定通往大目标的小目标。同时你应该定期追踪并更新自己设定的目标，必要时还要调整。</p>
-<h5 id="采取行动-1"><a href="#采取行动-1" class="headerlink" title="采取行动"></a>采取行动</h5><ul>
+<h4 id="思考未来你的目标是什么">思考未来：你的目标是什么</h4>
+<p>大目标并不需要那么具体，但是必须足够清晰，能够让你知道自己是在向它前进还是离他越来越远。一旦你想通了自己长远的大目标是什么，下一步就是设定路线，制定通往大目标的小目标。同时你应该定期追踪并更新自己设定的目标，必要时还要调整。</p>
+<h5 id="采取行动-1">采取行动</h5>
+<ul>
 <li>坐下来，为你的职业生涯设置至少一个大目标。</li>
-<li>将大目标分解成相应的若干小目标，例如：<ul>
+<li>将大目标分解成相应的若干小目标，例如：
+<ul>
 <li>月度目标；</li>
 <li>周目标；</li>
 <li>每日目标。</li>
@@ -314,56 +40,72 @@
 </li>
 <li>把你的大目标写在自己每天的必经之地，每日三省吾身——我在追求什么。</li>
 </ul>
-<h4 id="人际交往能力：远比你想象的重要"><a href="#人际交往能力：远比你想象的重要" class="headerlink" title="人际交往能力：远比你想象的重要"></a>人际交往能力：远比你想象的重要</h4><ul>
-<li><p><strong>每个人都希望感到自己很重要</strong> 请谨记当你和别人打交道的时候，你应该知道的最重要的一个概念就是：以自己为核心，每个人都希望自己很重要。这是人类最深邃、最致命的欲望之一，也是社会和生活中取得伟大成就的主要动机。</p>
+<h4 id="人际交往能力远比你想象的重要">人际交往能力：远比你想象的重要</h4>
+<ul>
+<li>
+<p><strong>每个人都希望感到自己很重要</strong> 请谨记当你和别人打交道的时候，你应该知道的最重要的一个概念就是：以自己为核心，每个人都希望自己很重要。这是人类最深邃、最致命的欲望之一，也是社会和生活中取得伟大成就的主要动机。</p>
 <p>不要轻率地否决同事的想法，以便于可以提出自己的想法，这样很可能会导致他们对你的想法充耳不闻，仅仅是因为你让他们感觉自己是无足轻重的。</p>
 </li>
-<li><p><strong>永远不要批评</strong>  如果你想去激励团队鼓舞士气，那么就用表扬代替批评吧。</p>
+<li>
+<p><strong>永远不要批评</strong>  如果你想去激励团队鼓舞士气，那么就用表扬代替批评吧。</p>
 </li>
-<li><p><strong>换位思考</strong> 思考对他人而言什么才最重要，什么是他们需要的。</p>
+<li>
+<p><strong>换位思考</strong> 思考对他人而言什么才最重要，什么是他们需要的。</p>
 </li>
-<li><p><strong>避免争吵</strong> 当你被拖入一场争吵之前，想想办法看看能不能逆转。做个有趣的小测试，试着认输。事实上，不仅仅要认输，更要果断站在对手一边，结果能让你大吃一惊。</p>
+<li>
+<p><strong>避免争吵</strong> 当你被拖入一场争吵之前，想想办法看看能不能逆转。做个有趣的小测试，试着认输。事实上，不仅仅要认输，更要果断站在对手一边，结果能让你大吃一惊。</p>
 </li>
 </ul>
-<h4 id="破解面试之道"><a href="#破解面试之道" class="headerlink" title="破解面试之道"></a>破解面试之道</h4><ul>
+<h4 id="破解面试之道">破解面试之道</h4>
+<ul>
 <li>大多数面试官决定雇佣某个人是基于各种各样的非技术因素；</li>
 <li>通过面试最快捷的方式是让面试官对你怀有好感。达成该目标有很多方法，其中大多数可以在面试之前完成；</li>
 <li>即使你现在不需要努力找工作，也要整理一份清单，列出你想去工作的公司，以及你认识的这些公司的人。</li>
 </ul>
-<h4 id="你是哪类软件开发人员"><a href="#你是哪类软件开发人员" class="headerlink" title="你是哪类软件开发人员"></a>你是哪类软件开发人员</h4><ul>
+<h4 id="你是哪类软件开发人员">你是哪类软件开发人员</h4>
+<ul>
 <li><strong>专业化很重要</strong> 专业化程度越深，潜在的机会就越少，但获得这些机会的可能性就越大。</li>
 <li><strong>选择你的专业</strong> 可以是公司项目的主要痛点，某一缺乏经验丰富的特定工作，各种会议上和用户组中常出现的话题。</li>
 </ul>
-<h5 id="采取行动-2"><a href="#采取行动-2" class="headerlink" title="采取行动"></a>采取行动</h5><ul>
+<h5 id="采取行动-2">采取行动</h5>
+<ul>
 <li>列出你能想到的所有软件开发的专业领域。从广义的范畴将它们逐一细化，看看你能细化到多具体。</li>
 <li>你当前的专业领域是什么？如果没有的话，想想你会选择专攻哪个领域。</li>
 <li>去主流的招聘网站上看看自己的专业领域市场行情如何。确定一下，专业化道路是会让自己受益，还是过度限制了自己的选择。</li>
 </ul>
-<h4 id="攀登晋升阶梯"><a href="#攀登晋升阶梯" class="headerlink" title="攀登晋升阶梯"></a>攀登晋升阶梯</h4><h5 id="承担责任"><a href="#承担责任" class="headerlink" title="承担责任"></a>承担责任</h5><ul>
+<h4 id="攀登晋升阶梯">攀登晋升阶梯</h4>
+<h5 id="承担责任">承担责任</h5>
+<ul>
 <li>有一个不受重视的项目，你能去负责它吗？</li>
 <li>你能帮助团队里的新人快速成长吗？</li>
 <li>你能负责文档制作流程，并保证及时更新这些文档吗？</li>
 <li>哪些工作是没有人愿意去做，你愿意承担起来，并将其简化或者自动化的？</li>
 </ul>
-<h5 id="引人注目"><a href="#引人注目" class="headerlink" title="引人注目"></a>引人注目</h5><ul>
+<h5 id="引人注目">引人注目</h5>
+<ul>
 <li><em>每天都记录自己的活动日志</em>——把这个日志以周报的形式发送给你的经理。</li>
 <li><em>提供演讲或培训</em>——选择一个对你的团队有用的话题。</li>
 <li><em>发表意见</em>——只要在会议上就这么做，或者只要你能得到机会就这么做。</li>
 <li><em>保证“曝光度“</em>——定期与老板会面，确保你经常被注意到。</li>
 </ul>
-<h5 id="自学"><a href="#自学" class="headerlink" title="自学"></a>自学</h5><ul>
+<h5 id="自学">自学</h5>
+<ul>
 <li>你应该不断学习新东西，提升自己的技能。另外，不要只学软件开发。如果你把目标设定为更高级别的岗位甚至是行政岗位，你还需要学习领导力、管理和商科的相关知识。</li>
 <li>不要玩完估计分享自己学到的东西。</li>
 </ul>
-<h5 id="成为问题的解决者"><a href="#成为问题的解决者" class="headerlink" title="成为问题的解决者"></a>成为问题的解决者</h5><ul>
+<h5 id="成为问题的解决者">成为问题的解决者</h5>
+<ul>
 <li>成为永远能为各种问题找到解决方案的人，成为勇于执行这些解决方案以获得成果的人。</li>
 </ul>
-<h5 id="关于政治"><a href="#关于政治" class="headerlink" title="关于政治"></a>关于政治</h5><ul>
+<h5 id="关于政治">关于政治</h5>
+<ul>
 <li>脚踏实地成为一个真正有价值的员工要比弄虚作假好得多</li>
 <li>至少应该知道会发生什么，哪种人需要避开，哪种人永远不要有交集</li>
 </ul>
-<h4 id="成为专业人士"><a href="#成为专业人士" class="headerlink" title="成为专业人士"></a>成为专业人士</h4><p>成为专业人士是一种心态。如果我们总是与恐惧、自毁、拖延和自我怀疑作斗争，那么问题就是：我们正在像外行那样思考问题。外行毫不起眼，外行废话连篇，外行屈从于逆境。专业人士可不这么想。不管怎样，他引人注目，他恪尽职守，他始终如一。</p>
-<h5 id="专业人士的品质"><a href="#专业人士的品质" class="headerlink" title="专业人士的品质"></a>专业人士的品质</h5><ul>
+<h4 id="成为专业人士">成为专业人士</h4>
+<p>成为专业人士是一种心态。如果我们总是与恐惧、自毁、拖延和自我怀疑作斗争，那么问题就是：我们正在像外行那样思考问题。外行毫不起眼，外行废话连篇，外行屈从于逆境。专业人士可不这么想。不管怎样，他引人注目，他恪尽职守，他始终如一。</p>
+<h5 id="专业人士的品质">专业人士的品质</h5>
+<ul>
 <li>遵守自己的原则；</li>
 <li>专注于正确完成工作；</li>
 <li>不惧怕承认自己错了；</li>
@@ -372,106 +114,9 @@
 <li>养成良好习惯；</li>
 <li>追求品质，完善自我。</li>
 </ul>
-<h4 id="书单"><a href="#书单" class="headerlink" title="书单"></a>书单</h4><ul>
+<h4 id="书单">书单</h4>
+<ul>
 <li>Dale Carnegie的《人性的弱点》</li>
 <li>Charles Duhigg的《习惯的力量》</li>
 </ul>
-
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-          
-
-<div class="post-copyright">
-<ul>
-  <li class="post-copyright-author">
-      <strong>本文作者： </strong>Hemin Won
-  </li>
-  <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="https://heminwon.github.io/blog/archives/clip_the-software-developer's-life-manaual.html" title="《软技能-代码之外的生存指南》读书笔记">https://heminwon.github.io/blog/archives/clip_the-software-developer's-life-manaual.html</a>
-  </li>
-  <li class="post-copyright-license">
-      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
-
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-            </div>
-            <div class="post-nav-item">
-                <a href="/blog/archives/svn-github.html" rel="next" title="github与svn实现git仓库单文件(夹)下载">
-                  github与svn实现git仓库单文件(夹)下载 <i class="fa fa-angle-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
-  </article>
-</div>
-
-
-
-
-
-
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-  <div class="copyright">
-    &copy; 2018 – 
-    <span itemprop="copyrightYear">2026</span>
-    <span class="with-love">
-      <i class="fa fa-heart"></i>
-    </span>
-    <span class="author" itemprop="copyrightHolder">Hemin Won</span>
-  </div>
-<div class="wordcount">
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-line"></i>
-    </span>
-    <span title="站点总字数">7k</span>
-  </span>
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-    <span title="站点阅读时长">6 分钟</span>
-  </span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
-
-    </div>
-  </footer>
-
-  
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-  <div class="sidebar-dimmer"></div>
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up fa-lg"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
-
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-</body>
-</html>
+<p class="license">文字与思考，欢迎分享。本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 许可协议。</p></article></div></main><footer class="site-footer"><div><a class="footer-title" href="/blog/">Hemin</a><p>保持好奇，慢慢生长。</p></div><div class="footer-links"><a href="/blog/archives.html">全部归档</a><a href="/blog/links.html">友情链接</a><a href="https://github.com/HeminWon">GitHub ↗</a><a href="/blog/atom.xml">RSS ↗</a></div><div class="footer-bottom"><span>© 2018–2026 Hemin Won</span><span>Still · Built with Astro</span><a href="#top">回到顶部 ↑</a></div></footer><script type="module">document.querySelector(`#theme`)?.addEventListener(`click`,()=>{let e=document.documentElement,t=e.dataset.theme===`dark`||!e.dataset.theme&&matchMedia(`(prefers-color-scheme: dark)`).matches?`light`:`dark`;e.dataset.theme=t;try{localStorage.setItem(`theme`,t)}catch{}});</script></body></html><script type="module">document.querySelectorAll(`.prose pre`).forEach(e=>{let t=e.querySelector(`code`);if(!t)return;let n=document.createElement(`button`);n.className=`code-copy`,n.textContent=`复制代码`,n.addEventListener(`click`,async()=>{try{await navigator.clipboard.writeText(t.textContent??``),n.textContent=`已复制`}catch{n.textContent=`请选中代码复制`}setTimeout(()=>n.textContent=`复制代码`,2e3)}),e.prepend(n)});</script>
