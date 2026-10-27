@@ -1,0 +1,19 @@
+---
+import { posts, date, terms } from '../../lib/blog';
+export async function getStaticPaths() {
+  const entries = await posts();
+  const paths: { params: {path:string}; props: any }[] = [];
+  paths.push({params:{path:'archives'},props:{kind:'list',title:'归档'}});
+  for(const field of ['categories','tags'] as const){
+    const names = new Set(entries.flatMap(p=>terms(p.data[field])));
+    for(const name of names) paths.push({params:{path:`${field}/${name}`},props:{kind:'list',title:name,field,term:name}});
+  }
+  for(const year of new Set(entries.map(p=>date(p.data.date).slice(0,4)))){
+    paths.push({params:{path:`archives/${year}`},props:{kind:'list',title:year,year}});
+    for(const month of new Set(entries.filter(p=>date(p.data.date).startsWith(year)).map(p=>date(p.data.date).slice(0,7)))) paths.push({params:{path:`archives/${month.replace('-','/')}`},props:{kind:'list',title:month,year:month}});
+  }
+  return paths;
+}
+import ContentPage from '../../layouts/ContentPage.astro';
+---
+<ContentPage {...Astro.props} />

@@ -1,0 +1,7 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { href, asset, galleryPath } from '../lib/blog';
+interface Props { entries: CollectionEntry<'gallery'>[] }
+const {entries}=Astro.props;
+---
+<div class="gallery-grid">{entries.map((work,index)=><a class="gallery-tile" href={href(galleryPath(work.id))}><div class="gallery-image"><img src={asset(work.data.cover)} alt={work.data.coverAlt} loading="lazy" width="900" height="1100"/></div><div class="gallery-caption"><span class="exhibit-number">{String(index+1).padStart(2,'0')}</span><h3>{work.data.title}</h3><span>{work.data.medium??work.data.date.getFullYear()}</span></div></a>)}</div>

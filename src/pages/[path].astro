@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+export async function getStaticPaths() {
+
+ const paths: {params:{path:string};props:any}[]=[];
+ for(const page of await getCollection('pages')) paths.push({params:{path:String(page.data.permalink).replace(/\.html$/, '')},props:{kind:'page',post:page}});
+ for(const [path,title] of [['timeline','时间轴'],['tags','标签'],['categories','分类']]) paths.push({params:{path},props:{kind:'list',title}});
+ for(const section of ['thoughts','gallery','tech']) paths.push({params:{path:section},props:{kind:'section',section}});
+ return paths;
+}
+import ContentPage from '../layouts/ContentPage.astro';
+import SectionPage from '../layouts/SectionPage.astro';
+---
+{Astro.props.kind==='section'?<SectionPage section={Astro.props.section}/>:<ContentPage {...Astro.props} />}

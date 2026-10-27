@@ -1,0 +1,6 @@
+---
+import { posts } from '../../lib/blog';
+export async function getStaticPaths(){return (await posts()).map(post=>({params:{path:post.id},props:{kind:'post',post}}));}
+import ContentPage from '../../layouts/ContentPage.astro';
+---
+<ContentPage {...Astro.props} />

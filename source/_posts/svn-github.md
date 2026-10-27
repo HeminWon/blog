@@ -1,4 +1,5 @@
 ---
+section: tech
 title: github与svn实现git仓库单文件(夹)下载
 date: 2019/04/16
 categories: tech
