@@ -1,0 +1,19 @@
+---
+import { render } from 'astro:content';
+import Layout from './Layout.astro';
+import { posts, href, postPath, date, terms, sectionOf } from '../lib/blog';
+import { sections } from '../theme';
+const {kind,post,title,field,term,year} = Astro.props;
+const rendered = post ? await render(post) : null;
+const Content = rendered?.Content;
+const entries = (await posts()).filter(p=>(!field || terms(p.data[field as 'tags'|'categories']).includes(term))&&(!year||date(p.data.date).startsWith(year)));
+const pageTitle=post?.data.title ?? title;
+const taxonomy = title==='标签'?'tags':title==='分类'?'categories':null;
+const names=taxonomy ? [...new Set(entries.flatMap(p=>terms(p.data[taxonomy])))]:[];
+const section = kind==='post'?sectionOf(post):undefined;
+---
+<Layout title={pageTitle} description={post?.data.description}>
+<header class="page-heading"><p class="eyebrow">{section?<a href={href(`${section}.html`)}>← {sections[section].english}</a>:'HEMIN / JOURNAL'}</p><h1>{pageTitle}</h1>{kind==='post'&&<div class="eyebrow"><time datetime={post.data.date.toISOString()}>{date(post.data.date)}</time><span> / {Math.max(1,Math.ceil((post.body?.length??0)/500))} 分钟阅读</span>{terms(post.data.categories).map(name=><a href={href(`categories/${encodeURIComponent(name)}.html`)}>{name}</a>)}</div>}</header>
+{Content?<div class:list={['reading-layout',section]}><article class="prose"><Content/>{kind==='post'&&<p class="license">文字与思考，欢迎分享。本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 许可协议。</p>}</article>{kind==='post'&&section==='tech'&&rendered!.headings.length>0&&<details class="toc" open><summary>本文目录</summary>{rendered!.headings.map(h=><a class={`depth-${h.depth}`} href={`#${h.slug}`}>{h.text}</a>)}</details>}</div>:taxonomy?<section class="taxonomy">{names.length?names.map(name=><a href={href(`${taxonomy}/${encodeURIComponent(name)}.html`)}>{name}</a>):<p class="empty-note">暂无标签。</p>}</section>:<section class="archive-list">{entries.map(p=><div class="archive-item"><time datetime={p.data.date.toISOString()}>{date(p.data.date)}</time><a href={href(postPath(p.id))}>{p.data.title}</a></div>)}</section>}
+</Layout>
+<script>document.querySelectorAll<HTMLElement>('.prose pre').forEach(pre=>{const code=pre.querySelector('code');if(!code)return;const button=document.createElement('button');button.className='code-copy';button.textContent='复制代码';button.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(code.textContent??'');button.textContent='已复制';}catch{button.textContent='请选中代码复制';}setTimeout(()=>button.textContent='复制代码',2000)});pre.prepend(button)});</script>

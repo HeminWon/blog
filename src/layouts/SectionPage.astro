@@ -1,0 +1,12 @@
+---
+import Layout from './Layout.astro';
+import PostList from '../components/PostList.astro';
+import GalleryGrid from '../components/GalleryGrid.astro';
+import Visual from '../components/Visual.astro';
+import { posts, gallery, sectionOf } from '../lib/blog';
+import { sections } from '../theme';
+interface Props { section: keyof typeof sections }
+const {section}=Astro.props;const info=sections[section];const entries=(await posts()).filter(p=>sectionOf(p)===section);const works=section==='gallery'?await gallery():[];
+---
+<Layout title={info.title} exhibition={section==='gallery'}><header class="page-heading"><p class="eyebrow">{info.number} / {info.english}</p><h1>{info.title}<span class="heading-dot">.</span></h1><p>{info.description}</p><span class="section-count">{section==='gallery'?`${works.length} 件作品`:`${entries.length} 篇记录`}</span></header>{section==='gallery'?works.length?<GalleryGrid entries={works}/>:<section class="gallery-empty"><Visual/><div><span class="eyebrow">展 厅 待 启</span><h2>展览尚在酝酿。</h2><p>待作品入室，再邀你驻足观看。</p><p class="muted">上方为主题的几何装饰，不是已发布作品。</p></div></section>:<><div class="search-bar"><label for="search">在{info.title}中寻找</label><input id="search" type="search" placeholder="输入标题或正文关键词"/><span class="eyebrow">{info.english}</span></div><PostList entries={entries} searchable/><p id="empty" class="empty-note" hidden>没有找到相关记录，换个关键词试试。</p>{!entries.length&&<p class="empty-note">新的记录，正在酝酿中。</p>}</>}</Layout>
+<script>document.querySelector<HTMLInputElement>('#search')?.addEventListener('input',event=>{const query=(event.target as HTMLInputElement).value.trim().toLowerCase();let count=0;document.querySelectorAll<HTMLElement>('[data-search]').forEach(row=>{row.hidden=!row.dataset.search?.includes(query);if(!row.hidden)count++});document.querySelector<HTMLElement>('#empty')!.hidden=count>0;});</script>

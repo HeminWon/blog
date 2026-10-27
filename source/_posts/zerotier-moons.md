@@ -1,4 +1,5 @@
 ---
+section: tech
 title: zerotier 专用根服务器
 date: 2021/10/28
 ---

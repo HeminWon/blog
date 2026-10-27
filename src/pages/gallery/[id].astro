@@ -1,0 +1,22 @@
+---
+import { render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { gallery, href, asset, date } from '../../lib/blog';
+export async function getStaticPaths(){return (await gallery()).map(work=>({params:{id:work.id},props:{work}}));}
+const {work}=Astro.props;const {Content}=await render(work);
+const images=work.data.images.length?work.data.images:[{src:work.data.cover,alt:work.data.coverAlt,caption:undefined}];
+---
+<Layout title={work.data.title} description={work.data.description} exhibition><header class="page-heading"><a class="eyebrow" href={href('gallery.html')}>← 返回展厅</a><h1>{work.data.title}</h1><p>{work.data.description}</p><span class="eyebrow">{date(work.data.date)} / {work.data.medium??'视觉记录'}</span></header><div class="work-images">{images.map((image,index)=><figure><button class="zoom-image" data-image={asset(image.src)} data-alt={image.alt} aria-label={`放大：${image.alt}`}><img src={asset(image.src)} alt={image.alt} loading="lazy"/></button>{image.caption&&<figcaption><span>{String(index+1).padStart(2,'0')}</span> {image.caption}</figcaption>}</figure>)}</div><article class="prose work-description"><Content/></article><dialog id="lightbox" aria-label="沉浸观展"><div class="lightbox-toolbar"><span>静观</span><span id="lightbox-count" aria-live="polite"></span><button class="lightbox-close" autofocus aria-label="退出观展">退出 ×</button></div><button class="lightbox-prev" aria-label="上一件作品">←</button><figure class="lightbox-art"><img alt=""/><figcaption id="lightbox-caption"></figcaption></figure><button class="lightbox-next" aria-label="下一件作品">→</button><span class="lightbox-hint">← → 切换作品 · Esc 退出</span></dialog></Layout>
+<script>
+const dialog=document.querySelector<HTMLDialogElement>('#lightbox');
+const buttons=Array.from(document.querySelectorAll<HTMLButtonElement>('.zoom-image'));
+let current=0;let opener:HTMLButtonElement|null=null;let previousOverflow='';
+function show(index:number){if(!dialog||!buttons.length)return;current=(index+buttons.length)%buttons.length;const button=buttons[current];const image=dialog.querySelector('img')!;image.src=button.dataset.image!;image.alt=button.dataset.alt!;dialog.querySelector('#lightbox-count')!.textContent=`${String(current+1).padStart(2,'0')} / ${String(buttons.length).padStart(2,'0')}`;dialog.querySelector('#lightbox-caption')!.textContent=button.closest('figure')?.querySelector('figcaption')?.textContent??button.dataset.alt??'';}
+buttons.forEach((button,index)=>button.addEventListener('click',()=>{if(!dialog)return;opener=button;show(index);previousOverflow=document.body.style.overflow;document.body.style.overflow='hidden';dialog.showModal();}));
+dialog?.querySelector('.lightbox-close')?.addEventListener('click',()=>dialog.close());
+dialog?.querySelector('.lightbox-prev')?.addEventListener('click',()=>show(current-1));
+dialog?.querySelector('.lightbox-next')?.addEventListener('click',()=>show(current+1));
+if(buttons.length<2)dialog?.querySelectorAll<HTMLButtonElement>('.lightbox-prev,.lightbox-next').forEach(button=>button.hidden=true);
+dialog?.addEventListener('keydown',event=>{if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();show(current+(event.key==='ArrowRight'?1:-1))}});
+dialog?.addEventListener('close',()=>{document.body.style.overflow=previousOverflow;opener?.focus()});
+</script>

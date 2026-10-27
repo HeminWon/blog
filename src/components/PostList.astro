@@ -1,0 +1,8 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { href, postPath, date, excerpt, sectionOf } from '../lib/blog';
+import { sections } from '../theme';
+interface Props { entries: CollectionEntry<'posts'>[]; searchable?: boolean }
+const {entries,searchable=false}=Astro.props;
+---
+<div class="post-list">{entries.map((post,index)=><section class="post-row" data-search={searchable?`${post.data.title} ${post.body??''}`.toLowerCase():undefined}><span class="row-index">{String(index+1).padStart(2,'0')}</span><div class="row-body"><div class="eyebrow"><span>{sections[sectionOf(post)].title}</span><span>·</span><time datetime={post.data.date.toISOString()}>{date(post.data.date)}</time></div><h3><a href={href(postPath(post.id))}>{post.data.title}</a></h3><p>{post.data.description??excerpt(post.body)}</p></div><a class="row-arrow" href={href(postPath(post.id))} aria-label={`阅读：${post.data.title}`}>↗</a></section>)}</div>
