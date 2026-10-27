@@ -5,3 +5,10 @@ Thumbs.db
 node_modules/
 dist/
 .astro/
+
+# Agent 工具目录
+/.agents/
+/.claude/
+/.codex/
+/.cursor/
+/.dsh/
