@@ -1,6 +1,7 @@
 ---
 import { render } from 'astro:content';
 import Layout from './Layout.astro';
+import '../styles/article.css';
 import { posts, href, postPath, date, terms, sectionOf } from '../lib/blog';
 import { sections } from '../theme';
 const {kind,post,title,field,term,year} = Astro.props;
@@ -13,7 +14,43 @@ const names=taxonomy ? [...new Set(entries.flatMap(p=>terms(p.data[taxonomy])))]
 const section = kind==='post'?sectionOf(post):undefined;
 ---
 <Layout title={pageTitle} description={post?.data.description}>
-<header class="page-heading"><p class="eyebrow">{section?<a href={href(`${section}.html`)}>← {sections[section].english}</a>:'HEMIN / JOURNAL'}</p><h1>{pageTitle}</h1>{kind==='post'&&<div class="eyebrow"><time datetime={post.data.date.toISOString()}>{date(post.data.date)}</time><span> / {Math.max(1,Math.ceil((post.body?.length??0)/500))} 分钟阅读</span>{terms(post.data.categories).map(name=><a href={href(`categories/${encodeURIComponent(name)}.html`)}>{name}</a>)}</div>}</header>
-{Content?<div class:list={['reading-layout',section]}><article class="prose"><Content/>{kind==='post'&&<p class="license">文字与思考，欢迎分享。本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 许可协议。</p>}</article>{kind==='post'&&section==='tech'&&rendered!.headings.length>0&&<details class="toc" open><summary>本文目录</summary>{rendered!.headings.map(h=><a class={`depth-${h.depth}`} href={`#${h.slug}`}>{h.text}</a>)}</details>}</div>:taxonomy?<section class="taxonomy">{names.length?names.map(name=><a href={href(`${taxonomy}/${encodeURIComponent(name)}.html`)}>{name}</a>):<p class="empty-note">暂无标签。</p>}</section>:<section class="archive-list">{entries.map(p=><div class="archive-item"><time datetime={p.data.date.toISOString()}>{date(p.data.date)}</time><a href={href(postPath(p.id))}>{p.data.title}</a></div>)}</section>}
+<div class:list={[kind === 'post' ? 'article-page' : 'content-page', section]}><header class="page-heading"><p class="eyebrow">{section?<a href={href(`${section}.html`)}>← {sections[section].english}</a>:'HEMIN / JOURNAL'}</p><h1>{pageTitle}</h1>{kind==='post'&&<div class="eyebrow"><time datetime={post.data.date.toISOString()}>{date(post.data.date)}</time><span> / {Math.max(1,Math.ceil((post.body?.length??0)/500))} 分钟阅读</span>{terms(post.data.categories).map(name=><a href={href(`categories/${encodeURIComponent(name)}.html`)}>{name}</a>)}</div>}</header>
+{Content?<div class:list={['reading-layout',section]}><article class="prose"><Content/>{kind==='post'&&<p class="license">文字与思考，欢迎分享。本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 许可协议。</p>}</article>{kind==='post'&&section==='tech'&&rendered!.headings.length>0&&<details class="toc" data-article-toc><summary>本文目录</summary>{rendered!.headings.map(h=><a class={`depth-${h.depth}`} href={`#${h.slug}`}>{h.text}</a>)}</details>}</div>:taxonomy?<section class="taxonomy">{names.length?names.map(name=><a href={href(`${taxonomy}/${encodeURIComponent(name)}.html`)}>{name}</a>):<p class="empty-note">暂无标签。</p>}</section>:<section class="archive-list">{entries.map(p=><div class="archive-item"><time datetime={p.data.date.toISOString()}>{date(p.data.date)}</time><a href={href(postPath(p.id))}>{p.data.title}</a></div>)}</section>}
+</div>
 </Layout>
-<script>document.querySelectorAll<HTMLElement>('.prose pre').forEach(pre=>{const code=pre.querySelector('code');if(!code)return;const button=document.createElement('button');button.className='code-copy';button.textContent='复制代码';button.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(code.textContent??'');button.textContent='已复制';}catch{button.textContent='请选中代码复制';}setTimeout(()=>button.textContent='复制代码',2000)});pre.prepend(button)});</script>
+<script>
+const toc = document.querySelector<HTMLDetailsElement>('[data-article-toc]');
+if (toc) {
+  const desktop = matchMedia('(min-width: 1101px)');
+  const syncToc = () => { toc.open = desktop.matches; };
+  syncToc();
+  desktop.addEventListener('change', syncToc);
+}
+document.querySelectorAll<HTMLElement>('.article-page .prose pre').forEach(pre => {
+  const code = pre.querySelector('code');
+  if (!code) return;
+  const block = document.createElement('div');
+  block.className = 'code-block';
+  pre.before(block);
+  block.append(pre);
+  const button = document.createElement('button');
+  button.className = 'code-copy';
+  button.textContent = '复制代码';
+  button.setAttribute('aria-label', '复制代码');
+  const feedback = document.createElement('span');
+  feedback.className = 'copy-feedback';
+  feedback.setAttribute('role', 'status');
+  button.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(code.textContent ?? '');
+      button.textContent = '已复制';
+      feedback.textContent = '代码已复制';
+    } catch {
+      button.textContent = '请选中代码复制';
+      feedback.textContent = '复制失败，请选中代码复制';
+    }
+    setTimeout(() => { button.textContent = '复制代码'; feedback.textContent = ''; }, 2000);
+  });
+  block.append(button, feedback);
+});
+</script>
