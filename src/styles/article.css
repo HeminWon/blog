@@ -1,0 +1,78 @@
+/* Reading pages have their own rhythm; exhibition and index layouts stay spacious. */
+.article-page {
+  --reading-width: 720px;
+  max-width: 960px;
+  margin-inline: auto;
+}
+.article-page.thoughts { --reading-width: 700px; max-width: 700px; }
+.article-page .page-heading {
+  max-width: var(--reading-width);
+  padding: 40px 0 24px;
+  margin: 0;
+}
+.article-page .page-heading > .eyebrow { margin-bottom: 0; }
+.article-page .page-heading h1 {
+  margin: 16px 0 14px;
+  font-size: 36px;
+  line-height: 1.4;
+  letter-spacing: .5px;
+  overflow-wrap: anywhere;
+}
+.article-page .page-heading > div.eyebrow { flex-wrap: wrap; gap: 6px 12px; letter-spacing: .7px; }
+.article-page .reading-layout {
+  grid-template-columns: minmax(0, 720px) 200px;
+  gap: 40px;
+  margin: 26px 0 64px;
+}
+.article-page.thoughts .reading-layout { max-width: 700px; margin: 26px 0 64px; }
+.article-page .prose { min-width: 0; font-size: 16px; line-height: 1.8; }
+.article-page.thoughts .prose { line-height: 1.85; }
+.article-page .prose > :first-child { margin-top: 0; }
+.article-page .prose p { margin: 0 0 15px; }
+.article-page .prose h2 { font-size: 26px; line-height: 1.45; margin: 36px 0 14px; }
+.article-page .prose h3 { font-size: 22px; line-height: 1.45; margin: 28px 0 12px; }
+.article-page .prose h4 { font-size: 18px; font-weight: 600; line-height: 1.5; margin: 24px 0 10px; }
+.article-page .prose h5,
+.article-page .prose h6 { font-size: 16px; font-weight: 600; line-height: 1.5; margin: 20px 0 8px; }
+.article-page .prose ul,
+.article-page .prose ol { margin: 12px 0 18px; padding-left: 1.5em; }
+.article-page .prose li { margin: 4px 0; }
+.article-page .prose li > p { margin-bottom: 6px; }
+.article-page .prose li > ul,
+.article-page .prose li > ol { margin: 6px 0; }
+.article-page .prose blockquote { margin: 22px 0; padding: 2px 0 2px 20px; }
+.article-page .prose blockquote > :last-child { margin-bottom: 0; }
+.article-page .prose hr { margin: 28px 0; }
+.article-page .prose pre { margin: 20px 0; padding: 18px; font-size: 13px; line-height: 1.7; }
+.article-page .code-block { position: relative; margin: 20px 0; }
+.article-page .code-block pre { margin: 0; }
+.article-page .code-block pre code { display: block; padding-right: 76px; font-size: inherit; }
+.article-page .code-copy {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  margin: 0;
+  padding: 4px 8px;
+  font: 10px/1.6 system-ui, sans-serif;
+  max-width: calc(100% - 16px);
+}
+.article-page .copy-feedback { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.article-page .toc { padding-left: 18px; font-size: 12px; max-height: calc(100dvh - 50px); overflow-y: auto; }
+.article-page .toc summary { font-size: 11px; margin-bottom: 12px; }
+.article-page .toc a { margin: 6px 0; line-height: 1.65; }
+.article-page .license { margin-top: 32px; padding-top: 18px; }
+@media (max-width: 1100px) {
+  .article-page { max-width: var(--reading-width); }
+  .article-page .reading-layout { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .article-page .toc { position: static; grid-row: 1; max-height: none; border: 1px solid var(--line); padding: 12px 16px; }
+  .article-page .toc:not([open]) summary { margin: 0; }
+}
+@media (max-width: 600px) {
+  .article-page .page-heading { padding: 30px 0 20px; }
+  .article-page .page-heading h1 { font-size: 28px; line-height: 1.45; margin: 14px 0 12px; }
+  .article-page .reading-layout,
+  .article-page.thoughts .reading-layout { margin: 22px 0 48px; gap: 18px; }
+  .article-page .prose h2 { font-size: 24px; }
+  .article-page .prose h3 { font-size: 20px; }
+  .article-page .prose pre { padding: 16px 14px; }
+}
