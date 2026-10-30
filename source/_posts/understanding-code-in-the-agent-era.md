@@ -4,7 +4,7 @@ date: 2026-10-30
 section: thoughts
 description: 当代码可以交给 Agent，如何判断自己真正理解了它？
 tags: [AI, 编程]
-draft: true
+draft: false
 ---
 
 设想 Agent 写好了一个搜索功能，界面正常，测试通过。你读完它的解释，也觉得没有问题。
